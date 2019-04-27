@@ -1,6 +1,7 @@
 FROM node:11-alpine
 WORKDIR /root/app
 COPY package.json .
+RUN npm i -g knex && npm i knex
 RUN npm install --only=production
 COPY . .
 EXPOSE 8080
