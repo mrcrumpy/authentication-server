@@ -23,7 +23,7 @@ exports.getJwks = async (req, res, next) => {
 };
 
 /**
- * Sign in using username and password and returns JWT
+ * Sign in using email and password and returns JWT
  */
 exports.postLogin = async (req, res, next) => {
   req.assert("email", "Email is not valid").notEmpty();
